@@ -1,6 +1,4 @@
-# Simfra
-
-AWS simulated infrastructure.
+**simfra** — AWS simulated infrastructure
 
 A single-container AWS simulator with 80+ services, 3,500+ operations, and real cross-service interactions. No AWS account required.
 
