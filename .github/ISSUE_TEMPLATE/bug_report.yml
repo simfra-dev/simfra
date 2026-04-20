@@ -1,0 +1,75 @@
+name: "Bug: Backend"
+description: Incorrect API behavior or a deviation from AWS
+labels: ["bug", "backend"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report incorrect behavior in the Simfra backend (API responses, cross-service interactions, state management).
+
+  - type: input
+    id: version
+    attributes:
+      label: Simfra version
+      description: Docker image tag or version string from startup logs
+      placeholder: "latest / v0.1.0 / 34f128d"
+    validations:
+      required: true
+
+  - type: input
+    id: service
+    attributes:
+      label: AWS service
+      description: Which AWS service is affected?
+      placeholder: "e.g. SQS, Lambda, IAM"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Minimal steps to reproduce the issue. Include CLI commands, SDK code, or Terraform config.
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What AWS does in the same scenario, if known.
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What Simfra did instead. Include error messages or response bodies.
+
+  - type: dropdown
+    id: docker
+    attributes:
+      label: Docker-backed services enabled?
+      options:
+        - "No (SIMFRA_DOCKER=false)"
+        - "Yes (SIMFRA_DOCKER=true)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Docker version, SDK/CLI version, anything relevant
+      placeholder: |
+        macOS 15.4 / Docker 27.5
+        aws-cli/2.22.0

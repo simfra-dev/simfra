@@ -1,0 +1,60 @@
+name: "Bug: Web Console"
+description: Issue with the web console (UI rendering, navigation, data display)
+labels: ["bug", "ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues with the Simfra web console (the browser UI at localhost:4599).
+
+  - type: input
+    id: version
+    attributes:
+      label: Simfra version
+      description: Docker image tag or version string
+      placeholder: "latest / v0.1.0 / 34f128d"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Steps to trigger the issue in the web console.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Attach screenshots or screen recordings if relevant.
+
+  - type: textarea
+    id: console_errors
+    attributes:
+      label: Browser console errors
+      description: Open DevTools → Console tab and paste any errors.
+      render: text

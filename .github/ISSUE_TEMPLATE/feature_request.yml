@@ -1,0 +1,63 @@
+name: Feature Request
+description: Request a new service, operation, or capability
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the feature you'd like and how it fits your use case.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of Simfra does this relate to?
+      options:
+        - "Backend (API / services)"
+        - "Web Console (UI)"
+        - "Documentation"
+        - "Docker / deployment"
+        - "Other"
+    validations:
+      required: true
+
+  - type: input
+    id: service
+    attributes:
+      label: AWS service
+      description: Which AWS service does this relate to? Leave blank if general.
+      placeholder: "e.g. SQS, Lambda, new service"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What do you want Simfra to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: How would you use this? What are you trying to test or develop?
+    validations:
+      required: true
+
+  - type: textarea
+    id: aws_behavior
+    attributes:
+      label: AWS behavior
+      description: |
+        How does AWS handle this? Link to relevant AWS docs if possible.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - "Nice to have"
+        - "Important — I have a workaround"
+        - "Blocking — I can't use Simfra without it"
+    validations:
+      required: true

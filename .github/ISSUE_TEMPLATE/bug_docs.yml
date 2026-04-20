@@ -1,0 +1,38 @@
+name: "Bug: Documentation"
+description: Incorrect, outdated, or missing documentation
+labels: ["bug", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues with the documentation at simfra.dev.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or section
+      description: Which page or section has the issue?
+      placeholder: "https://simfra.dev/docs/getting-started"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue type
+      options:
+        - Incorrect information
+        - Outdated information
+        - Missing information
+        - Unclear explanation
+        - Broken link or formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong and what should it say instead?
+    validations:
+      required: true
