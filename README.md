@@ -1,4 +1,4 @@
-**simfra** — AWS simulated infrastructure
+**simfra** - AWS simulated infrastructure
 
 A single-container AWS simulator with 80+ services, 3,500+ operations, and real cross-service interactions. No AWS account required.
 
@@ -37,9 +37,9 @@ docker run -p 4599:4599 \
 
 Full documentation at **[simfra.dev](https://simfra.dev)**:
 
-- [Getting Started](https://simfra.dev/docs/getting-started) — installation, Terraform, AWS SDKs, configuration
-- [Architecture](https://simfra.dev/docs/architecture) — request lifecycle, storage model, cross-service interactions
-- [Services](https://simfra.dev/docs/services) — full service table with fidelity levels and capabilities
+- [Getting Started](https://simfra.dev/docs/getting-started) - installation, Terraform, AWS SDKs, configuration
+- [Architecture](https://simfra.dev/docs/architecture) - request lifecycle, storage model, cross-service interactions
+- [Services](https://simfra.dev/docs/services) - full service table with fidelity levels and capabilities
 
 ## Issues
 
