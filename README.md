@@ -2,7 +2,7 @@
 
 A single-container AWS simulator with 80+ services and 3,500+ operations. All services on one port, real cross-service interactions, optional persistence to SQLite. No AWS account required.
 
-> **Early development** — APIs and behavior may change between releases.
+> **Early development** - APIs and behavior may change between releases.
 
 ## Infrastructure as code testing
 
