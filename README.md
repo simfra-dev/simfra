@@ -1,8 +1,8 @@
-**simfra** - AWS simulated infrastructure
+**simfra** - AWS cloud emulator
 
-A single-container AWS simulator with 80+ services, 3,500+ operations, and real cross-service interactions. No AWS account required.
+A single-container AWS simulator with 80+ services and 3,500+ operations. All services on one port, real cross-service interactions, optional persistence to SQLite. No AWS account required.
 
-> **Early development.** Simfra is under active development. APIs and behavior may change between releases.
+> **Early development** — APIs and behavior may change between releases.
 
 ## Infrastructure as code testing
 
@@ -16,6 +16,7 @@ docker run -p 4599:4599 ghcr.io/simfra-dev/simfra:latest
 export AWS_ENDPOINT_URL=http://localhost:4599
 export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_S3_USE_PATH_STYLE=true
 
 terraform init && terraform apply
 ```
